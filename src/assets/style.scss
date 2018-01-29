@@ -1,0 +1,224 @@
+$red: #c43d27;
+$grey: #b2af9a;
+$blue: #07bed6;
+$colors: (
+  red: $red,
+  grey: $grey,
+  blue: $blue
+);
+$fontFamily: "Architects Daughter", cursive;
+
+@each $type, $color in $colors {
+  .#{$type} {
+    color: $color;
+  }
+  .b-#{$type} {
+    background-color: $color;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: #fff;
+}
+.header {
+  margin: 15px auto auto;
+  display: block;
+  width: 450px;
+
+  .imageLogo {
+    height: 100px;
+    width: 100px;
+    float: left;
+  }
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 100px;
+    margin-left: 115px;
+  }
+}
+
+.legenda-blue,
+.legenda-red {
+  color: #fff;
+  width: 250px;
+  margin: 25px auto 0 auto;
+  border-radius: 100% 100% 0 0;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.legenda-blue {
+  background-color: $blue;
+}
+
+.legenda-red {
+  background-color: $red;
+}
+
+.block {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	left: 0;
+	display: block;
+	text-align: center;
+	line-height: 100vh;
+	font-size: 72px;
+	color: #fff;
+}
+
+.board {
+  border: 5px solid $grey;
+  margin: 50px auto auto;
+  width: 500px;
+  height: 500px;
+  font-size: 30px;
+
+  .header-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+      font-family: $fontFamily;
+      font-size: 18px;
+      border: none;
+      background: none;
+      color: $grey;
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .buttom {
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+  }
+  .buttoms {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .row {
+    display: flex;
+    width: 400px;
+    margin: 0 auto auto;
+
+    div {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      text-align: center;
+      font-size: 110px;
+    }
+
+    .X {
+      color: $red;
+    }
+
+    .O {
+      color: $blue;
+    }
+  }
+
+  .row-one {
+    border-bottom: 3px solid #d1d6cf;
+    .one,
+    .two {
+      border-right: 3px solid #d1d6cf;
+    }
+  }
+  .row-two {
+    @extend .row-one;
+  }
+  .row-three {
+    .one,
+    .two {
+      border-right: 3px solid #d1d6cf;
+    }
+  }
+
+  &.turn {
+    margin-top: 0;
+    &.turn-red {
+      border: 2px solid $red;
+    }
+
+    &.turn-blue {
+      border: 2px solid $blue;
+    }
+  }
+}
+
+.points {
+  display: flex;
+  justify-content: flex-end;
+  color: $grey;
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+
+  .point {
+    margin: 0 10px 0 10px;
+
+    &.first {
+      color: $red;
+    }
+
+    &.last {
+      color: $blue;
+    }
+  }
+}
+
+.modal {
+  width: 300px;
+  height: 300px;
+  background-color: $grey;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: -115px;
+  bottom: 0;
+  text-align: center;
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .next {
+    background-color: #fff;
+    width: 120px;
+    box-shadow: 5px 5px 5px #888;
+    border: 1px solid $grey;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 30px;
+    padding-top: 10px;
+  }
+
+  img {
+    width: 100px;
+    margin-top: 5px;
+  }
+}
