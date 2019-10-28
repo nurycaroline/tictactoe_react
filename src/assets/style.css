@@ -2,19 +2,22 @@
   color: #c43d27; }
 
 .b-red {
-  background-color: #c43d27; }
+  background-color: #c43d27;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .grey {
   color: #b2af9a; }
 
 .b-grey {
-  background-color: #b2af9a; }
+  background-color: #b2af9a;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .blue {
   color: #07bed6; }
 
 .b-blue {
-  background-color: #07bed6; }
+  background-color: #07bed6;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75); }
 
 body {
   font-family: "Architects Daughter", cursive;
@@ -85,11 +88,12 @@ body {
     margin-top: 20px;
     width: 100%;
     text-align: center; }
-  .board .buttom {
+  .board .button {
     color: #fff;
     padding: 15px;
-    cursor: pointer; }
-  .board .buttoms {
+    cursor: pointer;
+    border: none; }
+  .board .buttons {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -111,7 +115,8 @@ body {
   .board .row-one, .board .row-two {
     border-bottom: 3px solid #d1d6cf; }
     .board .row-one .one, .board .row-two .one,
-    .board .row-one .two, .board .row-two .two {
+    .board .row-one .two,
+    .board .row-two .two {
       border-right: 3px solid #d1d6cf; }
   .board .row-three .one,
   .board .row-three .two {

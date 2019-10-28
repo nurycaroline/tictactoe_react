@@ -34,17 +34,17 @@ export default class Question extends Component {
 					player ?
 						<div>
 							<h1 className='title grey'>How do you want to play?</h1>
-							<div className='buttoms'>
-								<buttom onClick={() => this.changeStatePlayer("ONEPLAYER")} className='buttom b-red'>ONE PLAYER</buttom>
-								<buttom onClick={() => this.changeStatePlayer("TWOPLAYER")} className='buttom b-blue'>TWO PLAYER</buttom>
+							<div className='buttons'>
+								<button onClick={() => this.changeStatePlayer("ONEPLAYER")} className='button b-red'>ONE PLAYER</button>
+								<button onClick={() => this.changeStatePlayer("TWOPLAYER")} className='button b-blue'>TWO PLAYER</button>
 							</div>
 						</div>
 					: letter ? 
 						<div>
 							<h1 className='title grey'>Would you like to be X or O?</h1>
-							<div className='buttoms'>
-								<buttom onClick={() => this.changeStateLetter("X")} className='buttom b-red'>X</buttom>
-								<buttom onClick={() => this.changeStateLetter("O")} className='buttom b-blue'>O</buttom>
+							<div className='buttons'>
+								<button onClick={() => this.changeStateLetter("X")} className='button b-red'>X</button>
+								<button onClick={() => this.changeStateLetter("O")} className='button b-blue'>O</button>
 							</div>
 						</div>
 					: ""

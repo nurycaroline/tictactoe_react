@@ -227,13 +227,12 @@ export default class Board extends Component {
           <div className="modal">
             <div className="content">
               <h1>{mensagemModalWinner}</h1>
-              <buttom
+              <button
                 className="next"
                 onClick={() => this.setState({ openModalWinner: false })}
               >
-                {" "}
                 NEXT GAME
-              </buttom>
+              </button>
             </div>
           </div>
         )}
